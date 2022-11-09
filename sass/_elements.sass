@@ -83,13 +83,13 @@ section
     position: relative
     z-index: 1
     margin: 6px
-    img 
+    img
         position: absolute
         top: -12px
         right: -10px
         max-height: 150px
         max-width: 150px
-    
+
     &::before
         content: ''
         display: block
@@ -101,7 +101,7 @@ section
         top: -7px
         left: -7px
         z-index: -1
-    
+
     &-menu
         display: none
 
@@ -130,7 +130,7 @@ section
         &::before
             display: none
 
-    &-img 
+    &-img
         padding-right: 100px
 
 .wrapper, .slider, .wrap, .wrap-strech, .wrap-start, .box-wrap
@@ -249,15 +249,26 @@ hr
     margin: 20px 0 20px
 
 @media screen and ( max-width: 1600px )
-    .container 
+    .container
         max-width: 1200px
-        padding: 0 15px
 
     .headline
         font-size: 42px
 
     .textline
         font-size: 22px
+
+    .btn
+        padding: 25px 50px 24px
+        font-size: 18px
+        img 
+            max-height: 150%
+        &-2
+            padding: 18px 20px 16px
+            font-size: 14px
+            border-width: 1px
+        &-img 
+            padding-right: 90px
 
 @media screen and ( max-width: 1200px )
     .headline
