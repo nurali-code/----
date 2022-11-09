@@ -14,7 +14,7 @@
     .container
         display: flex
         flex-direction: column
-        min-height: 650px
+        min-height: 1080px
         height: 100vh
         max-height: 1080px
 
@@ -49,6 +49,7 @@
 
     &-content
         margin: auto 0
+        padding: 0 0 100px 
 
     h1
         max-width: 80%
@@ -107,6 +108,79 @@
             width: 250px
             max-width: unset
 
+.bisnes
+    padding: 120px 0 200px
+    background-color: #161D25
+    background-image: url('../img/rip.svg'), url('../img/map.svg')
+    background-repeat: no-repeat
+    background-position: center bottom -10px, bottom -400px left -380px
+    background-size: 100vw auto, 800px auto
+    position: relative
+    z-index: 1
+    &::before
+        content: ''
+        display: block
+        width: 90%
+        height: 370px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        border-radius: 50%
+        background-color: rgba(#00CCCC, .4)
+        filter: blur(200px)
+        z-index: -1
+
+    .textline
+        margin-bottom: 100px
+
+    &-item
+        width: 370px
+        display: inline-block
+        text-align: center
+        img
+            width: 100%
+            height: 368px
+            border: 1px solid #00CCCC
+            border-radius: 185px
+            object-fit: cover
+
+        .btn
+            position: absolute
+            right: -30%
+            bottom: 10%
+        
+        &__img
+            width: 300px
+            position: relative
+            z-index: 1
+            margin: 30px 30px 90px
+            &::before
+                content: ''
+                width: calc( 100% + 60px )
+                height: calc( 100% + 60px )
+                left: -31px
+                top: -31px
+                border: 1px solid #00CCCC
+                border-radius: 180px
+                z-index: -1
+                position: absolute
+                display: block
+
+        &__num
+            font-weight: 900
+            font-size: 64px
+            line-height: 120%
+            margin-bottom: 5px
+            background-image: linear-gradient(180deg, #FFFFFF 43.29%, rgba(255, 255, 255, 0.479167) 61.7%, rgba(255, 255, 255, 0) 81.3%)
+            background-clip: text
+            color: transparent
+
+        &__text
+            font-weight: 600
+            font-size: 16px
+            line-height: 150%
+
 @media screen and ( max-width: 1600px )
 
     .main
@@ -127,7 +201,7 @@
             font-size: 14px
             line-height: 150%
             margin-right: 30px
-            img 
+            img
                 max-width: 60px
                 max-width: 60px
                 margin-right: 15px

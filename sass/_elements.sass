@@ -32,19 +32,17 @@ img
     max-width: 100%
 
 .headline
-    font-style: normal
-    font-weight: 600
-    font-size: 48px
-    text-align: left
-    line-height: 120%
-    margin: 0 0 60px 0
+    font-weight: 500
+    font-size: 36px
+    line-height: 44px
+    text-align: center
+    margin: 0 0 13px 0
 
 .textline
-    font-style: normal
-    font-weight: 300
-    font-size: 24px
-    line-height: 130%
-    opacity: .95
+    font-weight: 500
+    font-size: 20px
+    line-height: 24px
+    text-align: center
     margin: 0 0 40px 0
 
 .subheading
@@ -78,7 +76,7 @@ section
     display: inline-block
     background-color: #00CCCC
     border-radius: 100px
-    padding: 38px 73px 36px
+    padding: 31px 65px 30px
     box-shadow: 0 0 20px -5px #00CCCC
     position: relative
     z-index: 1
@@ -132,6 +130,17 @@ section
 
     &-img
         padding-right: 100px
+
+    &-sm
+        padding: 20px 60px 19px
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        &::before
+            width: calc( 100% + 8px )
+            height: calc( 100% + 8px )
+            left: -5px
+            top: -5px
 
 .wrapper, .slider, .wrap, .wrap-strech, .wrap-start, .box-wrap
     display: flex
@@ -220,7 +229,7 @@ textarea
     padding-top: 18px
 
 strong,b
-    font-weight: 600
+    font-weight: 700
     color: #fff
 
 ul
@@ -261,13 +270,13 @@ hr
     .btn
         padding: 25px 50px 24px
         font-size: 18px
-        img 
+        img
             max-height: 150%
         &-2
             padding: 18px 20px 16px
             font-size: 14px
             border-width: 1px
-        &-img 
+        &-img
             padding-right: 90px
 
 @media screen and ( max-width: 1200px )
