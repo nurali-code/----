@@ -14,7 +14,7 @@
     .container
         display: flex
         flex-direction: column
-        min-height: 1080px
+        min-height: 700px
         height: 100vh
         max-height: 1080px
 
@@ -49,7 +49,7 @@
 
     &-content
         margin: auto 0
-        padding: 0 0 100px 
+        padding: 0 0 20px
 
     h1
         max-width: 80%
@@ -108,7 +108,7 @@
             width: 250px
             max-width: unset
 
-.bisnes
+.business
     padding: 120px 0 200px
     background-color: #161D25
     background-image: url('../img/rip.svg'), url('../img/map.svg')
@@ -149,7 +149,7 @@
             position: absolute
             right: -30%
             bottom: 10%
-        
+
         &__img
             width: 300px
             position: relative
@@ -180,6 +180,47 @@
             font-weight: 600
             font-size: 16px
             line-height: 150%
+
+.scheme
+    background-color: #fff
+    color: #000
+    padding: 0
+    background-image: url('../img/compass.svg')
+    background-repeat: no-repeat
+    background-position: top 0px right 80px
+    .container
+        padding: 150px 0 230px
+        background-image: url('../img/scheme.jpg')
+        background-repeat: no-repeat
+        background-position: bottom 30% right
+        background-size: 64% auto
+    .heading
+        font-weight: 400
+    p
+        max-width: 400px
+        font-weight: 400
+        font-size: 16px
+        line-height: 140%
+        color: #0A2610
+        margin: 0 0 60px
+
+.partners
+    text-align: center
+    padding: 130px 0
+    background-color: #161D25
+    &-item
+        width: 270px
+        aspect-ratio: 1/1
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        background-color: #FFFFFF
+        border: 1px solid #A3A3A3
+        border-radius: 30px
+        margin-bottom: 30px
+        img
+            max-width: 80%
+            max-height: 90%
 
 @media screen and ( max-width: 1600px )
     .main
@@ -216,3 +257,21 @@
             right: 23%
             img
                 width: 200px
+
+    .business
+        padding: 90px 0 160px
+        background-position: center bottom -10px, bottom -400px left -450px
+
+        .textline
+            margin-bottom: 70px
+        &-item
+            &__img
+                margin-bottom: 60px
+                &::before
+                    width: calc( 100% + 50px )
+                    height: calc( 100% + 50px )
+                    left: -26px
+                    top: -26px
+
+            .btn
+                right: -10%
