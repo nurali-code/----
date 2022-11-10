@@ -7,7 +7,7 @@
 .header
     padding: 40px 0 0
 
-    .logo 
+    .logo
         max-width: 140px
 
     .nav
@@ -67,3 +67,71 @@
             &-link
                 font-size: 15px
                 padding: 20px 10px
+
+    @media screen and ( max-width: 1200px )
+        position: relative
+        z-index: 99999999
+        &-phone
+            margin: 0 20px 0 auto
+
+        .btn
+            margin-right: 20px
+            &-menu
+                order: 4
+        
+        .nav
+            position: fixed
+            top: 0
+            left: 0
+            z-index: 99999999
+            height: 100%
+            width: 100%
+            padding-top: 90px
+            display: block
+            transition: all ease .3s
+            transform: translateX(-100px)
+            opacity: 0
+            visibility: hidden
+            background-color: rgba($black, .8)
+            overflow-y: scroll
+            &::before
+                content: ''
+                max-width: 450px
+                display: block
+                width: 90%
+                height: 110%
+                position: fixed
+                top: 0
+                left: 0
+                z-index: -100
+                background-color: #374246
+
+            &-link
+                display: block
+                font-weight: 600
+                padding: 10px 40px
+                max-width: 330px
+
+            &.active
+                transform: translateX(0px)
+                opacity: 1
+                visibility: visible
+
+    @media screen and ( max-width: 700px )
+        padding: 30px 0
+        flex-wrap: wrap
+        justify-content: center
+        .btn 
+            display: none
+            &-menu 
+                margin-left: 30%
+                order: 2
+
+        &-phone 
+            margin-top: 20px
+            width: 100%
+            text-align: center
+            justify-content: center
+            order: 3
+
+        

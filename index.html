@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Выставка Домов</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css?ver-1234">
 </head>
 
 <body>
@@ -71,6 +71,14 @@
         </div>
         <img src="img/man.png" class="main__man" alt="man">
         <button class="btn-play"><img src="img/text-btn.svg" alt="Посмотреть видео о посёлке"></button>
+        <div class="cont">
+            <div class="noite"></div>
+            <div class="constelacao"></div>
+            <div class="lua">
+                <div class="textura"></div>
+            </div>
+            <div class="chuvaMeteoro"></div>
+        </div>
     </main>
 
     <section class="business">
@@ -122,9 +130,10 @@
             </p>
             <p>
                 Увидеть масштаб территории выставки
-                — 2 га. Тут есть все для вас и ваших клиентов
-                .</p>
+                — 2 га. Тут есть все для вас и ваших клиентов.
+            </p>
             <p>Задать все интересующие вопросы администратору и выберете участок для вас и ваших клинтов.</p>
+            <img src="img/scheme.jpg" class="scheme__img" alt="scheme">
             <button class="btn">Арендовать участок</button>
         </div>
     </section>
@@ -143,8 +152,20 @@
     </section>
 
     <footer>
-        <div class="container">
-
+        <!-- <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Abb6cd8a176e0029c3b15ad40b6bde89765239f6ea02d66f67a04d5493630609c&amp;source=constructor"
+            width="100%" height="720" frameborder="0"></iframe> -->
+        <div class="container wrap">
+            <img src="img/logo-2.svg" alt="logo">
+            <p>
+                Выставка малоэтажного домостроения
+                на "Мытищинской ярмарке"
+            </p>
+            <a href="#" class="btn">проложить маршрут</a>
+            <div class="contact">
+                <a href="tel:+74955257007" class="phone">+ 7 (495) 525-70-07</a>
+                <a href="#">ПЕРЕЗВОНИТЬ ВАМ?</a>
+            </div>
         </div>
     </footer>
 
@@ -170,7 +191,8 @@
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
-    <script src="./js/scripts.js" defer></script>
+    <script src="./js/sky.js" defer></script>
+    <script src="./js/scripts.js?ver-1234" defer></script>
 
 </body>
 

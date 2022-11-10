@@ -1,180 +1,57 @@
-.contacts
-    position: relative
-    z-index: 1
-    min-height: 90vh
-    iframe
-        width: 100% !important
-        height: 100% !important
-        position: absolute
-        top: 0
-        left: 0
-        z-index: -1
-
+footer
     .container
-        padding: 100px 0 0
-        position: static
-        z-index: unset
-
-    &-item
-        max-width: 350px
-        padding: 20px
-        color: $black
-        background-color: #fff
-        position: absolute
-        top: 10%
-        left: 20%
-        box-shadow: 0 0 30px -2px rgba(0, 0, 0, .6)
-
-    &__img
-        width: 100%
-        border-radius: 6px
-        height: 200px
-        margin-bottom: 10px
-        object-fit: cover
-
-    &__heading
-        font-size: 20px
-        margin-bottom: 15px
-
-    &__link
-        display: block
-        color: #000
-        font-size: 18px
-        line-height: 120%
+        flex-wrap: nowrap
+        max-width: 1600px
+        padding: 100px 15px
+    p
+        max-width: 520px
         font-weight: 400
-        padding: 5px 0
-        text-align: left
-        position: relative
-        z-index: 1
-        padding-left: 35px
-        img
-            width: 25px
-            object-fit: contain
-            display: inline-block
-            position: absolute
-            left: 0
-            top: 50%
-            transform: translateY(-50%)
-        
-
-.footer
-    padding: 50px 0 0
-    // border-top: 1px solid rgba(255, 255, 255, .5)
-    .logo
-        max-width: 200px
-
-    &__contacts
+        font-size: 20px
+        line-height: 140%
+        text-transform: uppercase
+        max-width: 32%
+    .contact
         text-align: right
+        .phone
+            font-weight: 900
+            font-size: 36px
+            line-height: 130%
+            text-decoration: none
+            margin-bottom: 17px
         a
+            display: block
+            font-weight: 400
+            font-size: 20px
+            line-height: 24px
+            text-decoration-line: underline
+            text-transform: uppercase
+
+    @media screen and ( max-width: 1600px )
+        p
             font-size: 16px
-            display: inline-block
-            text-transform: capitalize
-            margin: 0 4px 0
-            opacity: .8
-            img
-                width: 20px
-                margin-right: 3px
-                display: inline-block
-                vertical-align: middle
-
-    &__phone
-        opacity: 1 !important
-        display: block
-        font-size: 22px !important
-        margin-bottom: 2px !important
-        img
-            width: 35px !important
-
-    &__bottom
-        border-top: 1px solid rgba(255, 255, 255, .2)
-        margin-top: 25px
-        padding: 35px 0 
-        text-align: center
-        width: 100%
-
-    .nav
-        margin-bottom: 10px
-        a
-            padding: 10px 20px
-            display: inline-block
-            font-size: 18px
-
-    .developt
-        width: 100%
-        font-size: 14px
-        text-align: center
-        padding: 12px 0 
-        background-color: rgba(255, 255, 255, .1)
-        a
-            text-decoration: underline
-
-@media screen and ( max-width: 1500px )
-    .contacts 
-        &-item 
-            left: 5%
-
-@media screen and ( max-width: 1200px )
-    .contacts
-        &-item
-            left: 40px
-            top: 40px
-
-    .footer
-        &__contacts
-            margin: 0 15px 0 auto
-
-        .nav
-            max-width: 70%
+        .contact
             text-align: right
-            margin-bottom: 0
+            .phone
+                font-size: 26px
+                margin-bottom: 8px
+
             a
-                padding: 10px 15px 0
+                font-size: 18px
 
-@media screen and ( max-width: 700px )
-    .contacts
-        &-item
-            position: relative
-            left: 0
-            top: 0
-            width: 100%
-            max-width: 100%
-
-        iframe
-            position: static
-            height: 500px !important
-
-    .footer
+    @media screen and ( max-width: 1200px )
         .wrap
             display: block
-        
-        &__contacts
-            width: 240px
-            margin: 0 auto 0
             text-align: center
-            img
-                display: none !important
+            padding: 60px 15px
 
-        .logo
-            display: block
-            max-width: 80%
-            margin: 0 auto 25px
+        p
+            max-width: 500px
             text-align: center
+            margin: 30px auto 
 
-        .nav
-            max-width: 100%
-            text-align: left
-            margin-bottom: 40px
+        .btn
+
+        .contact
+            width: 300px
             text-align: center
-            a
-                opacity: .7
-                min-width: 49%
-                display: inline-block
-                vertical-align: middle
-                padding: 5px 15px
-
-        .phone 
-            text-align: center
-            margin-bottom: 20px
-
-        &__bottom
-            margin-top: 5px
+            margin: 40px auto 0
