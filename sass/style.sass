@@ -3,7 +3,7 @@
 @import 'header'
 @import 'footer'
 // @import 'anim'
-// @import 'slick'
+@import 'slick'
 @import 'modal'
 
 .main
@@ -238,14 +238,23 @@
 .slider
     background-color: #fff
     padding: 120px 0
+    overflow: hidden
+
     .headline
         color: #000
         margin-bottom: 120px
+    
     &-slide
         background-color: #696969
+        max-width: 1570px
+        height: 660px
         border-radius: 50px
         overflow: hidden
-        padding: 147px 250px 86px 478px
+        padding: 40px 250px 40px 478px
+        display: flex !important
+        justify-content: center
+        flex-direction: column
+        
         position: relative
         z-index: 1
 
@@ -270,7 +279,6 @@
 
     .wrap-start 
         flex-wrap: wrap
-
 
 @media screen and ( max-width: 1600px )
     .main

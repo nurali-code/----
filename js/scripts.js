@@ -10,6 +10,18 @@ $('a[href*="#"]').on('click', function (e) {
 
 /*---------------------------------------------------end*/
 
+$('.slider-wrapper').slick({
+    slideToShow: 1,
+    lideToScroll: 1,
+    centerMode: true,
+    variableWidth: true,
+    arrows: true,
+    dots: true,
+})
+
+/*---------------------------------------------------end*/
+
+
 $(function () {
     function showModal(id) {
         $(id).fadeIn(300);
@@ -47,6 +59,7 @@ $(function () {
         }
     });
 });
+
 /*---------------------------------------------------end*/
 
 $('input[name="u-phone"]').inputmask({ "mask": "+7 (999)-999-99-99" });
