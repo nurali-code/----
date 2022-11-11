@@ -17,6 +17,14 @@ $('.slider-wrapper').slick({
     variableWidth: true,
     arrows: true,
     dots: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                arrows: false,
+            }
+        },
+    ]
 })
 
 /*---------------------------------------------------end*/
@@ -62,7 +70,7 @@ $(function () {
 
 /*---------------------------------------------------end*/
 
-$('input[name="u-phone"]').inputmask({ "mask": "+7 (999)-999-99-99" });
+$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 $(".form").submit(function () {
     $('form .btn').attr('disabled', 'disabled');

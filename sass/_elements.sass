@@ -175,21 +175,20 @@ select
     resize: none
     display: block
     width: 100%
-    max-width: 400px
-    height: 50px
+    max-width: 470px
+    height: 80px
     background: #fff
-    font-weight: 400
-    font-size: 18px
-    line-height: 32px
-    padding: 0 20px
+    font-size: 16px
+    line-height: 20px
+    padding: 0 60px
     text-align: left
     color: $black
     appearance: none
-    margin-bottom: 20px
-    border-radius: 6px
+    margin-bottom: 40px
+    border-radius: 50px
     border: 1px solid rgba(0, 0, 0, .2)
     &::placeholder
-        color: rgba(#000 , .5)
+        color: rgba(#000 , .6)
         font-weight: 300
 
 label
@@ -210,6 +209,7 @@ select
 .heading
     font-weight: 900
     font-size: 64px
+    text-align: center
     line-height: 78px
     margin-bottom: 120px
     text-transform: uppercase
@@ -262,6 +262,10 @@ hr
 @media screen and ( max-width: 1600px )
     .container
         max-width: 1200px
+
+    .heading
+        font-size: 44px
+        line-height: 120%
 
     .headline
         font-size: 30px
@@ -382,7 +386,16 @@ hr
             font-size: 12px
             padding: 14px 20px 12px
 
+    input,
+    textarea,
+    select
+        height: 70px
+        padding: 0 40px
+
 @media screen and ( max-width: 700px )
+
+    .heading
+        font-size: 32px
 
     .headline
         font-size: 24px

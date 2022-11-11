@@ -106,7 +106,7 @@
         &::before
             display: none
 
-    &-prev 
+    &-prev
         display: none !important
 
     &-next
@@ -121,6 +121,8 @@
             display: inline-block
             margin: 0
             padding: 5px
+            &::before
+                display: none
 
         button
             width: 40px
@@ -134,9 +136,17 @@
             button
                 background-color: #00CCCC
 
-@media screen and ( max-width: 1280px )
-    .slick
+    @media screen and ( max-width: 1600px )
+        &-dots
+            margin: 40px 0 0
 
-@media screen and ( max-width: 768px )
-    .slick
-        &-arrow
+    @media screen and ( max-width: 1200px )
+
+        &-dots
+            text-align: center
+            margin: 0
+            width: 100%
+            padding: 0
+            position: absolute
+            bottom: 30px
+            left: 0
