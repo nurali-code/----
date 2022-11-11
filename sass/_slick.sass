@@ -90,47 +90,49 @@
         display: none
 
     &-arrow
-        width: 30px
-        height: 30px
+        width: 80px
+        height: 80px
         background-color: transparent
         color: transparent
         position: absolute
-        top: 50%
+        bottom: -10px
         z-index: 10000
-        left: -60px
-        transform: translateY(-50%) scaleX(-1) !important
         border: none
-        background-image: url('../img/arrow_next.svg')
+        background-image: url('../img/slider-arrow.svg')
         background-repeat: no-repeat
         background-position: center center
-        background-size: 24px 24px
+        background-size: contain
 
         &::before
             display: none
 
+    &-prev 
+        display: none !important
+
     &-next
-        transform: translateY(-50%) !important
         left: auto
-        right: -60px
+        right: 60px
 
     &-dots
-        text-align: center
-        margin: 40px auto 0
+        text-align: right
+        padding: 0 280px 0 0
+        margin: 100px auto 0
         li
             display: inline-block
-            margin: 0 5px
-        
+            margin: 0
+            padding: 5px
+
         button
-            width: 100px
-            height: 10px
-            background-color: #00CCCC
-            opacity: .3
+            width: 40px
+            height: 4px
+            background-color: #C0C0C0
+
             color: transparent
             border-radius: 5px
-        
+
         .slick-active
             button
-                opacity: 1
+                background-color: #00CCCC
 
 @media screen and ( max-width: 1280px )
     .slick
