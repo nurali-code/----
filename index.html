@@ -126,7 +126,8 @@
             </button>
         </div>
         <img src="img/man.png" class="main__man" alt="man">
-        <button class="btn-play"><img src="img/text-btn.svg" alt="Посмотреть видео о посёлке"></button>
+        <button class="btn-play open-modal" data-modal="modal-video"><img src="img/text-btn.svg"
+                alt="Посмотреть видео о посёлке"></button>
         <div class="cont">
             <div class="noite"></div>
             <div class="constelacao"></div>
@@ -194,7 +195,7 @@
             </p>
             <p>Задать все интересующие вопросы администратору и выберете участок для вас и ваших клинтов.</p>
             <img src="img/scheme.jpg" class="scheme__img" alt="scheme">
-            <button class="btn">Арендовать участок</button>
+            <button class="btn open-modal" data-modal="modal-form">Арендовать участок</button>
         </div>
     </section>
 
@@ -402,16 +403,16 @@
     </section>
 
     <footer>
-        <iframe
+        <!-- <iframe
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Abb6cd8a176e0029c3b15ad40b6bde89765239f6ea02d66f67a04d5493630609c&amp;source=constructor"
-            width="100%" height="720" frameborder="0"></iframe>
+            width="100%" height="720" frameborder="0"></iframe> -->
         <div class="container wrap">
             <img src="img/logo-2.svg" alt="logo">
             <p>
                 Выставка малоэтажного домостроения
                 на "Мытищинской ярмарке"
             </p>
-            <a href="#" class="btn">проложить маршрут</a>
+            <button class="btn open-modal" data-modal="modal-location">проложить маршрут</button>
             <div class="contact">
                 <a href="tel:+74955257007" class="phone">+ 7 (495) 525-70-07</a>
                 <a href="#">ПЕРЕЗВОНИТЬ ВАМ?</a>
@@ -419,29 +420,66 @@
         </div>
     </footer>
 
-    <div class="modal" id="modal-form">
+    <div class="modal" id="modal-video">
+        <button class="modal-close">&#x2715</button>
         <div class="modal-content">
-            <button class="modal-close">&#x2715</button>
-            <p class="headline">Заказать Консультацию</p>
-            <form class="form">
-                <input type="hidden" name="headline" value="Заказан звонок">
-                <div class="inp-wrap">
-                    <label>Имя</label>
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/qvn-ryZjeIM"
+                title="Визуализация проекта " Выставка="" домов="" на="" Мытищинской="" ярмарке""="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen=""></iframe>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-form">
+        <button class="modal-close">&#x2715</button>
+        <div class="modal-content">
+            <div class="modal-title">
+                <p class="headline">Арендавать участок на <b>выстовке домов</b> в москве</p>
+                <p class="text">Успей подать заявку и менеджер свяжется с вами.</p>
+                <form class="form">
+                    <input type="hidden" name="headline" value="Заказан звонок">
                     <input type="text" id="u-name" name="u-name" required placeholder="Как вас зовут?">
-                </div>
-                <div class="inp-wrap">
-                    <label>Телефон</label>
                     <input type="tel" name="u-phone" id="u-phone" required placeholder="Ваш номер телефона">
-                </div>
-                <button type="submit" class="btn">Отправить</button>
-            </form>
+                    <div class="inp-rad">
+                        <input type="checkbox" name="check" id="radcheck">
+                        <label for="radcheck">
+                            Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+            <img src="img/scheme.jpg" class="modal-img" alt="map">
+        </div>
+    </div>
+
+    <div class="modal" id="modal-location">
+        <button class="modal-close">&#x2715</button>
+        <div class="modal-content">
+            <div class="modal-title">
+                <p class="headline">Арендавать участок на <b>выстовке домов</b> в москве</p>
+                <p class="text">Успей подать заявку и менеджер свяжется с вами.</p>
+                <form class="form">
+                    <input type="hidden" name="headline" value="Заказан звонок">
+                    <input type="text" id="u-name" name="u-name" required placeholder="Как вас зовут?">
+                    <input type="tel" name="u-phone" id="u-phone" required placeholder="Ваш номер телефона">
+                    <div class="inp-rad">
+                        <input type="checkbox" name="check" id="radcheck2">
+                        <label for="radcheck2">
+                            Нажимая кнопку вы соглашаетесь с условиями <a href="#">Политики конфиденциальности</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">Отправить</button>
+                </form>
+            </div>
+            <img src="img/map.svg" class="modal-img map" alt="map">
         </div>
     </div>
 
     <script src="./js/jquery-3.4.1.min.js" defer></script>
     <script src="./js/jquery.inputmask.min.js" defer></script>
     <script src="./js/slick.min.js" defer></script>
-    <script src="./js/sky.js" defer></script>
+    <!-- <script src="./js/sky.js" defer></script> -->
     <script src="./js/scripts.js?ver-345" defer></script>
 
 </body>

@@ -259,6 +259,48 @@ hr
     height: 1px
     margin: 20px 0 20px
 
+.inp
+    &-rad
+        position: relative
+        display: block
+        label
+            display: block
+            padding-left: 33px
+            font-weight: 400
+            font-size: 12px
+            line-height: 15px
+            max-width: 340px
+            cursor: pointer
+            a 
+                color: #000
+                font-weight: bold
+            &::after,
+            &::before
+                content: ''
+                display: block
+                width: 20px
+                height: 20px
+                border: 1px solid #00CCCC
+                border-radius: 50%
+                position: absolute
+                top: 5px
+                left: 0
+            &::after
+                background-color: #00CCCC
+                transition: all ease .3s
+                transform: scale(0)
+        input
+            position: absolute
+            opacity: 0
+            visibility: hidden
+            top: 0
+            left: 0
+            width: 20px
+            height: 20px
+            &:checked ~ label
+                &::after
+                    transform: scale(.5)
+
 @media screen and ( max-width: 1600px )
     .container
         max-width: 1200px

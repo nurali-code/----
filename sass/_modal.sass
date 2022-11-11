@@ -12,52 +12,79 @@
     &-content
         width: 94%
         min-height: 100px
-        max-height: 98%
         display: block
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
         background-color: #fff
-        max-width: 400px
-        overflow-y: scroll
+        max-width: 1200px
         color: $black
         text-align: left
         border-radius: 24px
-        padding: 32px 30px 40px
-        -ms-overflow-style: none
-        scrollbar-width: none
-        &::-webkit-scrollbar
-            display: none
-            width: 0
-            height: 0
-
-        &::before
-            display: none
+        padding: 100px 30px 100px 100px
+        overflow: hidden
+        // overflow-y: scroll
+        // -ms-overflow-style: none
+        // scrollbar-width: none
+        // &::-webkit-scrollbar
+        //     display: none
+        //     width: 0
+        //     height: 0
 
         .headline
-            font-size: 32px
-            line-height: 120%
-            max-width: 90%
-            margin-bottom: 30px
+            font-weight: 400
+            font-size: 24px
+            line-height: 29px
+            text-transform: uppercase
+            margin-bottom: 4px
+            text-align: left
+
+        .text
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 40px
+
+        input
+            border-color: #00CCCC
+            margin-bottom: 24px
 
         .btn
-            margin-top: 20px
+            margin-top: 30px
+            width: 400px
 
         .inp
             &-wrap
                 margin-bottom: 15px
 
+    &-title
+        max-width: 480px
+
+    &-img
+        position: absolute
+        top: 0
+        left: 50%
+        width: 100%
+        object-fit: cover
+        object-position: top left
+        height: 100%
+        &.map
+            width: 73%
+            height: 135%
+            top: -22%
+
+    iframe
+        border-radius: 10px
+        height: 600px
+        height: 600px
+
     &-close
         position: absolute
         top: 32px
         right: 32px
-        border-radius: 50%
-        font-size: 20px
-        background-color: rgba($black, .2)
-        color: $black
-        width: 36px
-        height: 36px
+        font-size: 60px
+        color: #fff
 
     &.active
         visibility: visible
@@ -65,6 +92,28 @@
 
     &.is-open
         display: block
+
+    &#modal-video
+        .modal
+            &-content
+                background-color: #000000
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+                border-radius: 30px
+                box-shadow: 0 0 20px 0px #1396E1
+                padding: 20px
+
+    &#modal-form
+        display: block
+
+    @media screen and ( max-width: 1600px )
+        iframe
+            height: 450px
+
+        &-content
+            max-width: 900px
+
+        &-close
+            font-size: 40px
 
     @media screen and ( max-width: 1170px )
         &-content
@@ -85,6 +134,8 @@
             font-size: 14px
 
     @media screen and ( max-width: 700px )
+        iframe
+            height: 220px
         &-content
             max-width: 400px
             padding: 25px 16px 30px
@@ -97,6 +148,4 @@
         &-close
             top: 17px
             right: 16px
-            font-size: 14px
-
-       
+            font-size: 35px
