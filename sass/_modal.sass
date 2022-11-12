@@ -9,6 +9,7 @@
     background-color: rgba(#000, 0.6)
     padding: 0
     box-sizing: border-box
+    overflow: hidden
     &-content
         width: 94%
         min-height: 100px
@@ -58,21 +59,56 @@
             &-wrap
                 margin-bottom: 15px
 
+        .number
+            font-weight: 900
+            font-size: 64px
+            line-height: 78px
+            &__text
+                font-weight: 400
+                font-size: 20px
+                line-height: 150%
+
+    form
+        margin-top: 40px
+
     &-title
-        max-width: 480px
+        display: inline-block
+        vertical-align: middle
+        width: 480px
+        max-width: 45%
 
     &-img
         position: absolute
-        top: 0
+        z-index: -1
+        top: 5%
         left: 50%
-        width: 100%
+        width: 70%
         object-fit: cover
         object-position: top left
         height: 100%
+        pointer-events: none
         &.map
             width: 73%
             height: 135%
             top: -22%
+
+        &.book
+            width: 60%
+            height: 110%
+            top: auto
+            bottom: 0
+            object-fit: contain
+
+        &.info
+            left: auto
+            right: 20px
+            height: 90%
+            display: inline-block
+            max-width: 48%
+            border: 1px solid #00CCCC
+            border-radius: 20px
+            object-fit: cover
+            object-position: center center
 
     iframe
         border-radius: 10px
@@ -93,7 +129,7 @@
     &.is-open
         display: block
 
-    &#modal-video
+    &.modal-video
         .modal
             &-content
                 background-color: #000000
@@ -102,23 +138,33 @@
                 box-shadow: 0 0 20px 0px #1396E1
                 padding: 20px
 
-    &#modal-form
-        display: block
+    &.modal-present
+        .modal
+            &-content
+                overflow: visible
+
+    &.modal-info,
+    &.modal-info-2,
+    &.modal-info-3
+        .modal
+            &-content
+                min-height: 500px
 
     @media screen and ( max-width: 1600px )
         iframe
             height: 450px
 
         &-content
-            max-width: 900px
+            max-width: 1100px
+            padding: 50px 60px
 
         &-close
             font-size: 40px
 
-    @media screen and ( max-width: 1170px )
+    @media screen and ( max-width: 1200px )
         &-content
             max-width: 400px
-            padding: 30px 20px 35px
+            padding: 30px 40px 45px
             .headline
                 font-size: 24px
                 line-height: 32px
@@ -126,23 +172,74 @@
             .btn
                 width: 100%
 
-        &-close
-            top: 24px
-            right: 24px
-            width: 24px
-            height: 24px
-            font-size: 14px
+            .number
+                font-weight: 900
+                font-size: 44px
+                line-height: 120%
+                &__text
+                    font-size: 16px
+                    line-height: 130%
+
+        form
+            margin-top: 20px
+            .btn
+                max-width: 95%
+                margin: 30px auto 0
+                display: block
+
+        &-img
+            display: none
+            &.info
+                position: static
+                width: 100%
+                height: unset
+                max-width: 100%
+                margin: 0 auto 20px
+
+        &-title
+            max-width: 100%
+
+        &.modal-video
+            .modal
+                &-content
+                    max-width: 900px
+                    padding: 10px
+
+        iframe
+            border-radius: 30px
+
+        &.modal-info,
+        &.modal-info-2,
+        &.modal-info-3
+            .modal
+                &-content
+                    max-width: 600px
+                    min-height: unset
+
+                &-img
 
     @media screen and ( max-width: 700px )
+        &.modal-video
+            .modal
+                &-content
+                    max-width: 900px
+                    padding: 10px
+
         iframe
-            height: 220px
+            height: 250px
+            border-radius: 20px
+
         &-content
             max-width: 400px
-            padding: 25px 16px 30px
+            padding: 25px 20px 30px
             border-radius: 14px
             .headline
                 font-size: 20px
-                line-height: 22px
+                line-height: 130%
+                margin-bottom: 15px
+
+        form
+            input
                 margin-bottom: 15px
 
         &-close

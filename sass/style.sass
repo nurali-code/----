@@ -2,18 +2,30 @@
 @import 'elements'
 @import 'header'
 @import 'footer'
-@import 'anim'
-@import 'logo-anim'
+// @import 'anim'
+// @import 'logo-anim'
 @import 'slick'
 @import 'modal'
 
 .main
     overflow: hidden
-    background-image: url('../img/scroll.svg'), url('../img/maket-fona.png')
+    background-image: url('../img/maket-fona.png')
     background-repeat: no-repeat
-    background-position: right 40px bottom 50px, center center
-    background-size: 54px 155px, cover
+    background-position: center center
+    background-size: cover
     position: relative
+    &__scroll
+        position: absolute
+        z-index: 10000
+        bottom: 20px
+        right: 30px
+        max-width: 100px
+        height: 200px
+        filter: drop-shadow(0 0 8px #000)
+        svg
+            width: 100% !important
+            height: 100% !important
+
     .container
         display: flex
         flex-direction: column
@@ -202,6 +214,7 @@
     .heading
         margin-bottom: 10px
         font-weight: normal
+
     .textline
         // font-size: 24px
         font-weight: 400
@@ -317,6 +330,7 @@
             height: 100%
             object-fit: contain
             transform-origin: 50% 52%
+
         &__inner
             animation: rotateCompass 4s ease-in-out infinite alternate-reverse
 
@@ -329,6 +343,12 @@
         right: 0
         max-width: 63%
         z-index: -1
+        &.car-1
+            animation: car-1 10s ease-in-out infinite alternate-reverse
+        &.car-2
+            animation: car-2 12s ease-in-out infinite alternate-reverse
+        &.car-3
+            animation: car-3 8s ease-in-out infinite alternate
 
     .heading
         font-weight: 400
@@ -405,6 +425,27 @@
 
     .wrap-start
         flex-wrap: wrap
+
+@keyframes rotateCompass
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+@keyframes car-1
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(-258px, 151px)
+@keyframes car-2
+    0%
+        transform: translate(356px, -208px)
+    100%
+        transform: translate(-42px, 24px)
+@keyframes car-3
+    0%
+        transform: translate(192px, -113px)
+    100%
+        transform: translate(-110px, 62px)
 
 @media screen and ( max-width: 1600px )
     .main
@@ -492,6 +533,9 @@
             display: block
             min-height: 880px
 
+        &__scroll
+            display: none
+
         &-content
             padding: 100px 0 0
             .btn
@@ -536,7 +580,8 @@
             max-width: 700px
 
         .btn
-            margin-top: 200px
+            display: block
+            margin: 200px auto 0
 
         &__img
             top: 63%
@@ -616,16 +661,23 @@
 
         .headline
             margin-bottom: 40px
+            text-align: center
 
         .textline
-            margin-bottom: 30px
+            margin: 0 auto 30px
+            text-align: center
 
         &-title
             max-width: 100%
             margin-bottom: 60px
+
         form
             max-width: 300px
             margin: 0 auto
+            h4
+                text-align: center
+            p
+                text-align: center
             input
                 margin-bottom: 30px
 
@@ -697,7 +749,7 @@
             margin: 0 10px
 
     .scheme
-        .heading 
+        .heading
             max-width: 85%
         &-compass
             width: 100px
